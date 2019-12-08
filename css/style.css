@@ -3,6 +3,30 @@
 	color: white;
 }
 
+#statsNav {
+	z-index: 9999;
+}
+
+.graph-nav {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.section-header {
+	color: #1122FF;
+}
+
 /* Home Page */
 div.overlay {
 	background-color: rgba(0, 0, 0, 0.4);
@@ -10,11 +34,15 @@ div.overlay {
 	left: 0;
 	top: 0;
 	width: 100%;
+	height: 100%;
 }
 div.banner {
-	background-image: url("../images/galaxy-background-image-main.jpg");
-	background-size: cover;
+	background-image: url("../images/preaching-festival-background-image-main.jpg");
+	background-size: 100% 700px;
+	background-attachment: fixed;
+	height: 60vh;
 }
+
 .banner-wmt {
 	display: block;
 	width: 100%;
@@ -58,6 +86,7 @@ main h2 {
 	color: white;
 	padding: 10px 0;
 	margin: 20px 0;
+	width: 100px;
 }
 .group-section-title:hover {
 	cursor: pointer;
@@ -165,6 +194,10 @@ td, th {
 @media 
 only screen and (max-width: 1050px) {
 
+	#statsNav {
+		display: none;
+	}
+
 	#admin-page h1, #attendance-page h1 {
 		font-size: 2em;
 	}
@@ -241,6 +274,13 @@ only screen and (max-width: 1050px) {
 	.banner h1, .container h1 {
 		font-size:	3.0em;
 		word-break: break-word;
+	}
+
+	div.banner {
+		height: 65vh;
+		background-size: 520px 600px;
+		background-position: center top;
+
 	}
 
 

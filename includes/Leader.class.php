@@ -114,6 +114,29 @@ class Leader extends Dbh {
 	
 	}
 
+	public function getTotal($content) {
+
+		$conn = $this->connect();
+		$dayData = array();
+
+		$sql = "SELECT SUM(" . $content . ") AS total FROM leader";
+
+		try {
+
+			$stmt = $conn->prepare($sql);
+			$stmt->execute();
+
+			if($row = $stmt->fetch()) {
+
+				return $row['total'];
+				
+			}
+			
+		} catch (Exception $e) {
+			echo $e->getMessage();
+		}
+	}
+
 	public function getPercentageToGoal($leaderName) {
 
 		$conn = $this->connect();

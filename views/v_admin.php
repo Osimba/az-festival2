@@ -4,7 +4,7 @@
 	<h1><?php echo $Leader->getLeaderInfo($_SESSION['leader'])['title']; ?> Admin Input</h1>
 
 	<?php 
-		for($i = 1; $i <= 6; $i++) {
+		for($i = 1; $i <= 3; $i++) {
 			echo $Group->drawTable($i, $groupWeek[$i], $_SESSION['leader']);
 	 ?>
 	<br><br>

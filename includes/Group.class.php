@@ -145,7 +145,7 @@ class Group extends Dbh {
 
 	}
 
-	private function getContentTotal($content, $groupName) {
+	public function getContentTotal($content, $groupName) {
 
 		$conn = $this->connect();
 		$dayData = array();

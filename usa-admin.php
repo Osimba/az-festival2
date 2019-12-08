@@ -16,12 +16,7 @@
 			$_SESSION['last_active'] = time();
 		}
 
-
-		$attendanceDates = ['1015T', '1019M', '1019A', '1019E', '1022T', '1026M', '1026A', '1026E'];
-		$leaderAttendance = $Leader->getLeaderAttendance($_SESSION['leader']);
-
 		
-
 
 	} else {
 		//if not logged in redirect

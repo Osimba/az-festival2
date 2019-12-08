@@ -8,39 +8,18 @@
 		'jesus', 'lani', 'thomas', 
 		'avondale', 'mesa', 'nogales', 'sphoenix', 'surprise', 'tucson', 'yuma');
 
-	$i = 0;
 
-	//Get data for Total
-	foreach ($sortedLeaderArray as $leader) {
-		$festivalData[$i] = $Group->getWeekTable(1013, 1026, $leader);
-		$attendanceData[$i] =  $Leader->getLeaderAttendance($leader);
-		unset($attendanceData[$i]['total']);
-		$i++;
-	}
 
+	/* AZ Data */
 	$arizonaGoal['unconnected'] = 21000;
 	$arizonaGoal['connected'] = 500;
 	$arizonaGoal['baptism'] = 28;
 	$arizonaGoal['attendance'] = 15;
 
-	$arizonaData['unconnected'] = 0;
-	$arizonaData['connected'] = 0;
-	$arizonaData['baptism'] = 0;
-	$arizonaData['attendance'] = 0;
-
-	//Add all data for totals in unconnected, connected, baptisms and attendance
-	for ($j = 0; $j < sizeof($sortedLeaderArray); $j++) { 
-		
-		foreach($festivalData[$j] as $value) {
-			$arizonaData['unconnected'] += $value['unconnected'];
-			$arizonaData['connected'] += $value['connected'];
-			$arizonaData['baptism'] += $value['baptism'];
-		}
-
-		foreach ($attendanceData[$j] as $value) {
-			$arizonaData['attendance'] += $value;
-		}
-	}
+	$arizonaData['unconnected'] = $Leader->getTotal('unconnected');
+	$arizonaData['connected'] = $Leader->getTotal('connected');
+	$arizonaData['baptism'] = $Leader->getTotal('baptism');
+	$arizonaData['attendance'] = $Leader->getTotal('attendance');
 
 	/* NA Data */
 	$northAmericaGoal['unconnected'] = 2000000;
@@ -54,11 +33,10 @@
 	$northAmericaData['attendance'] = 42;
 
 	/* WCA Data */
-
-	$westCoatAssociationGoal['unconnected'] = 700000;
+	$westCoatAssociationGoal['unconnected'] = 5181000;
 	$westCoatAssociationGoal['connected'] = 7000;
-	$westCoatAssociationGoal['baptism'] = 500;
-	$westCoatAssociationGoal['attendance'] = 200;
+	$westCoatAssociationGoal['baptism'] = 7920;
+	$westCoatAssociationGoal['attendance'] = 5190;
 
 	$westCoatAssociationData['unconnected'] = 144049;
 	$westCoatAssociationData['connected'] = 11493;

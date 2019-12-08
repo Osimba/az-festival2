@@ -68,9 +68,23 @@ $(document).ready(function() {
 
 		
 	}); //#update-data
+
+
+	window.onscroll = function() {stickyFunction()};
+
+	var navbar = document.getElementById("statsNav");
+	var sticky = navbar.offsetTop;
+
+	function stickyFunction() {
+	  if (window.pageYOffset >= sticky) {
+	    navbar.classList.add("sticky")
+	  } else {
+	    navbar.classList.remove("sticky");
+	  }
+	}
 	
 
-	$("#youth-female-title").click(function(){
+	/*$("#youth-female-title").click(function(){
 		$("#youth-female-data").slideToggle("slow")
 	});
 	$("#adult-female-title").click(function(){
@@ -84,7 +98,7 @@ $(document).ready(function() {
 	});
 	$("#branch-church-title").click(function(){
 		$("#branch-church-data").slideToggle("slow")
-	});
+	});*/
 
 
 });

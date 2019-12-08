@@ -31,19 +31,9 @@
 					<div class="collapse navbar-collapse" id="navbarNav">
 						    <div class="navbar-nav ml-auto">
 
-						    	<div class="dropdown nav-item">
-						    		<a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownStats" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stats</a>
-
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownStats">
-										<a class="dropdown-item" href="<? echo ROOT_DIR . 'usa-stats.php'; ?>">Wipe Mother's Tears Festival</a>
-										<a class="dropdown-item" href="<? echo ROOT_DIR . 'index.php'; ?>">I'm Sorry Festival</a>	
-									</div>
-								</div>
-
 								<?php if(isset($_SESSION["leader"])): ?>
 									
-									<a class="nav-link" href="<? echo ROOT_DIR . 'usa-admin.php'; ?>">Attendance Admin</a>
-									<a class="nav-link" href="<? echo ROOT_DIR . 'admin.php'; ?>">Main Admin</a>
+									<a class="nav-link" href="<? echo ROOT_DIR . 'admin.php'; ?>">Admin</a>
 									<a class="nav-link" href="<? echo ROOT_DIR . 'login-admin.php?logout=true'; ?>">Logout</a>
 								<?php else:?>
 									
